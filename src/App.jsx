@@ -68,8 +68,6 @@ function App() {
 
         {/* Gallery Section */}
         <section id="gallery" className="section container">
-          <h2 className="section-title">Event Gallery</h2>
-          <p className="section-desc">A glimpse into our hackathons, workshops, and community meetups.</p>
           <div className="gallery-grid">
             <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Students collaborating" className="gallery-img" />
             <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Hackathon" className="gallery-img" />
