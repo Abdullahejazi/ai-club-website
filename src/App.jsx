@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { translations } from './translations';
 import './index.css';
 
 // A helper component to handle directional scroll animations
 function AnimatedDiv({ children, delay = 0, scrollDir, className, style }) {
-  // If scrolling down, elements come from bottom (+50px). If scrolling up, they come from top (-50px)
   const yOffset = scrollDir === 'down' ? 50 : -50;
   
   return (
@@ -23,7 +23,20 @@ function AnimatedDiv({ children, delay = 0, scrollDir, className, style }) {
 
 function App() {
   const [scrollDir, setScrollDir] = useState('down');
+  const [lang, setLang] = useState('en');
+  const [theme, setTheme] = useState('dark');
 
+  // Apply Theme & Direction to document
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang', lang);
+  }, [lang]);
+
+  // Scroll direction tracking
   useEffect(() => {
     let lastScrollY = window.pageYOffset;
     const updateScrollDir = () => {
@@ -39,15 +52,25 @@ function App() {
     return () => window.removeEventListener('scroll', updateScrollDir);
   }, [scrollDir]);
 
+  const t = translations[lang];
+
   return (
     <div>
       <AnimatedDiv className="nav container" scrollDir={scrollDir}>
         <div className="nav-logo">AI<span>Club</span></div>
         <div className="nav-links">
-          <a href="#departments">Departments</a>
-          <a href="#events">Events</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#team">Team</a>
+          <a href="#departments">{t.nav.departments}</a>
+          <a href="#events">{t.nav.events}</a>
+          <a href="#gallery">{t.nav.gallery}</a>
+          <a href="#team">{t.nav.team}</a>
+        </div>
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <button onClick={() => setLang(lang === 'en' ? 'ar' : 'en')} className="btn" style={{ padding: '0.4rem 0.8rem', fontSize: '0.9rem', backgroundColor: 'transparent', border: '1px solid var(--border)', color: 'var(--text)' }}>
+            {lang === 'en' ? 'عربي' : 'EN'}
+          </button>
+          <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="btn" style={{ padding: '0.4rem 0.8rem', fontSize: '1rem', backgroundColor: 'transparent', border: '1px solid var(--border)', color: 'var(--text)' }}>
+            {theme === 'dark' ? '☀️' : '🌙'}
+          </button>
         </div>
       </AnimatedDiv>
 
@@ -61,9 +84,9 @@ function App() {
             viewport={{ once: false }}
             transition={{ duration: 0.8 }}
           >
-            <h1>Build the future<br />with Artificial Intelligence</h1>
-            <p>Join our university's fastest-growing community of students dedicated to machine learning, deep learning, and AI innovation.</p>
-            <p style={{ color: 'var(--accent)', fontWeight: 600, marginTop: '1rem' }}>Empowering the next generation of tech leaders.</p>
+            <h1>{t.hero.titleLine1}<br />{t.hero.titleLine2}</h1>
+            <p>{t.hero.description}</p>
+            <p style={{ color: 'var(--accent)', fontWeight: 600, marginTop: '1rem' }}>{t.hero.subtitle}</p>
           </motion.div>
         </section>
 
@@ -72,19 +95,19 @@ function App() {
           <AnimatedDiv className="container stats-grid" scrollDir={scrollDir}>
             <div className="stat-item">
               <h3>50+</h3>
-              <p>Active Members</p>
+              <p>{t.stats.members}</p>
             </div>
             <div className="stat-item">
               <h3>10+</h3>
-              <p>AI Projects</p>
+              <p>{t.stats.projects}</p>
             </div>
             <div className="stat-item">
               <h3>15+</h3>
-              <p>Workshops</p>
+              <p>{t.stats.workshops}</p>
             </div>
             <div className="stat-item">
               <h3>3</h3>
-              <p>Hackathons Won</p>
+              <p>{t.stats.hackathons}</p>
             </div>
           </AnimatedDiv>
         </section>
@@ -92,39 +115,39 @@ function App() {
         {/* Departments Section */}
         <section id="departments" className="section container">
           <AnimatedDiv scrollDir={scrollDir}>
-            <h2 className="section-title">Our Departments</h2>
-            <p className="section-desc">We have specialized groups for every interest. Find your fit and join the conversation in our WhatsApp community!</p>
+            <h2 className="section-title">{t.departments.title}</h2>
+            <p className="section-desc">{t.departments.desc}</p>
           </AnimatedDiv>
           
           <div className="grid">
             <AnimatedDiv className="card" delay={100} scrollDir={scrollDir}>
-              <h3>📱 Social Media Department</h3>
-              <p style={{ fontSize: '0.9rem', color: 'var(--accent)', marginBottom: '0.5rem', fontWeight: 'bold' }}>قسم الإعلام الرقمي</p>
-              <p>Manage our public presence, design content, and spread the word about our amazing club.</p>
+              <h3>{t.departments.socialTitle}</h3>
+              <p style={{ fontSize: '0.9rem', color: 'var(--accent)', marginBottom: '0.5rem', fontWeight: 'bold' }}>{t.departments.socialSub}</p>
+              <p>{t.departments.socialDesc}</p>
             </AnimatedDiv>
 
             <AnimatedDiv className="card" delay={200} scrollDir={scrollDir}>
-              <h3>🎉 Events & Activities Department</h3>
-              <p style={{ fontSize: '0.9rem', color: 'var(--accent)', marginBottom: '0.5rem', fontWeight: 'bold' }}>قسم الفعاليات والأنشطة</p>
-              <p>Organize hackathons, tech talks, and social gatherings to bring the AI community together.</p>
+              <h3>{t.departments.eventsTitle}</h3>
+              <p style={{ fontSize: '0.9rem', color: 'var(--accent)', marginBottom: '0.5rem', fontWeight: 'bold' }}>{t.departments.eventsSub}</p>
+              <p>{t.departments.eventsDesc}</p>
             </AnimatedDiv>
 
             <AnimatedDiv className="card" delay={300} scrollDir={scrollDir}>
-              <h3>🤝 Sponsorship & Partnership Department</h3>
-              <p style={{ fontSize: '0.9rem', color: 'var(--accent)', marginBottom: '0.5rem', fontWeight: 'bold' }}>قسم الشراكات والرعاية</p>
-              <p>Connect with tech companies and sponsors to fund our events and provide professional opportunities.</p>
+              <h3>{t.departments.sponsorTitle}</h3>
+              <p style={{ fontSize: '0.9rem', color: 'var(--accent)', marginBottom: '0.5rem', fontWeight: 'bold' }}>{t.departments.sponsorSub}</p>
+              <p>{t.departments.sponsorDesc}</p>
             </AnimatedDiv>
 
             <AnimatedDiv className="card" delay={400} scrollDir={scrollDir}>
-              <h3>⚙️ AI Engineering Department</h3>
-              <p style={{ fontSize: '0.9rem', color: 'var(--accent)', marginBottom: '0.5rem', fontWeight: 'bold' }}>قسم هندسة الذكاء الاصطناعي</p>
-              <p>Build, train, and deploy real-world AI models. Collaborate on technical projects and codebases.</p>
+              <h3>{t.departments.engTitle}</h3>
+              <p style={{ fontSize: '0.9rem', color: 'var(--accent)', marginBottom: '0.5rem', fontWeight: 'bold' }}>{t.departments.engSub}</p>
+              <p>{t.departments.engDesc}</p>
             </AnimatedDiv>
 
             <AnimatedDiv className="card" delay={500} scrollDir={scrollDir}>
-              <h3>📚 Learning & Workshops Department</h3>
-              <p style={{ fontSize: '0.9rem', color: 'var(--accent)', marginBottom: '0.5rem', fontWeight: 'bold' }}>قسم التعلم وورش العمل</p>
-              <p>Design and teach beginner to advanced AI courses and workshops to upskill our members.</p>
+              <h3>{t.departments.learnTitle}</h3>
+              <p style={{ fontSize: '0.9rem', color: 'var(--accent)', marginBottom: '0.5rem', fontWeight: 'bold' }}>{t.departments.learnSub}</p>
+              <p>{t.departments.learnDesc}</p>
             </AnimatedDiv>
           </div>
         </section>
@@ -132,35 +155,35 @@ function App() {
         {/* Timeline Section */}
         <section id="events" className="section container" style={{ backgroundColor: 'var(--surface-hover)', borderRadius: '24px', padding: '4rem 2rem' }}>
           <AnimatedDiv scrollDir={scrollDir}>
-            <h2 className="section-title">Our Journey</h2>
-            <p className="section-desc">Key milestones and upcoming events.</p>
+            <h2 className="section-title">{t.timeline.title}</h2>
+            <p className="section-desc">{t.timeline.desc}</p>
           </AnimatedDiv>
           
           <div className="timeline">
             <AnimatedDiv className="timeline-item" scrollDir={scrollDir} delay={100}>
               <div className="timeline-dot"></div>
               <div className="timeline-content">
-                <span className="timeline-date">Upcoming • Oct 15</span>
-                <h3>Introduction to Machine Learning Workshop</h3>
-                <p>A hands-on session for beginners to build their first prediction model.</p>
+                <span className="timeline-date">{t.timeline.upcoming} • {t.timeline.event1Date}</span>
+                <h3>{t.timeline.event1Title}</h3>
+                <p>{t.timeline.event1Desc}</p>
               </div>
             </AnimatedDiv>
             
             <AnimatedDiv className="timeline-item" scrollDir={scrollDir} delay={200}>
               <div className="timeline-dot"></div>
               <div className="timeline-content">
-                <span className="timeline-date">Past • Sep 20</span>
-                <h3>Fall 2026 Hackathon</h3>
-                <p>Our engineering department took 1st place in the university-wide AI hackathon.</p>
+                <span className="timeline-date">{t.timeline.past} • {t.timeline.event2Date}</span>
+                <h3>{t.timeline.event2Title}</h3>
+                <p>{t.timeline.event2Desc}</p>
               </div>
             </AnimatedDiv>
 
             <AnimatedDiv className="timeline-item" scrollDir={scrollDir} delay={300}>
               <div className="timeline-dot"></div>
               <div className="timeline-content">
-                <span className="timeline-date">Past • Sep 05</span>
-                <h3>First General Meeting</h3>
-                <p>Kicked off the semester with a massive turnout of students passionate about AI.</p>
+                <span className="timeline-date">{t.timeline.past} • {t.timeline.event3Date}</span>
+                <h3>{t.timeline.event3Title}</h3>
+                <p>{t.timeline.event3Desc}</p>
               </div>
             </AnimatedDiv>
           </div>
@@ -187,19 +210,19 @@ function App() {
         {/* Team Section */}
         <section id="team" className="section container">
           <AnimatedDiv scrollDir={scrollDir}>
-            <h2 className="section-title">Meet the Founders</h2>
-            <p className="section-desc">The students behind the initiative.</p>
+            <h2 className="section-title">{t.team.title}</h2>
+            <p className="section-desc">{t.team.desc}</p>
           </AnimatedDiv>
           <div className="team-grid">
             <AnimatedDiv className="team-member" delay={100} scrollDir={scrollDir}>
               <img src="https://ui-avatars.com/api/?name=Abdullah&background=f47c20&color=fff&size=256" alt="Abdullah" className="team-avatar" />
               <h3>Abdullah</h3>
-              <p>Co-Founder</p>
+              <p>{t.team.role}</p>
             </AnimatedDiv>
             <AnimatedDiv className="team-member" delay={200} scrollDir={scrollDir}>
               <img src="https://ui-avatars.com/api/?name=Co+Founder&background=f47c20&color=fff&size=256" alt="Co-Founder 2" className="team-avatar" />
               <h3>Co-Founder 2</h3>
-              <p>Co-Founder</p>
+              <p>{t.team.role}</p>
             </AnimatedDiv>
           </div>
         </section>
@@ -207,14 +230,14 @@ function App() {
         {/* Call to Action */}
         <section className="section container" style={{ textAlign: 'center', borderBottom: 'none', paddingBottom: '2rem' }}>
           <AnimatedDiv scrollDir={scrollDir}>
-            <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Ready to shape the future?</h2>
+            <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>{t.cta.title}</h2>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
               <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" className="btn" style={{ backgroundColor: '#25D366', color: '#fff', fontSize: '1.1rem', padding: '1rem 2rem' }}>
-                Join our WhatsApp Group
+                {t.cta.btn}
               </a>
               
               <div style={{ marginTop: '1rem' }}>
-                <p style={{ color: 'var(--text-muted)', marginBottom: '1rem', fontWeight: 600 }}>Follow Us</p>
+                <p style={{ color: 'var(--text-muted)', marginBottom: '1rem', fontWeight: 600 }}>{t.cta.follow}</p>
                 <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
                   <a href="https://www.instagram.com/aiclub_yu/?hl=en" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -238,7 +261,7 @@ function App() {
       </main>
 
       <footer className="section container" style={{ textAlign: 'center', padding: '3rem 0', color: 'var(--text-muted)' }}>
-        <p>&copy; {new Date().getFullYear()} University AI Club. Built with React & Vite.</p>
+        <p>&copy; {new Date().getFullYear()} {t.footer}</p>
       </footer>
     </div>
   );

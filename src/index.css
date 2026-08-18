@@ -10,6 +10,15 @@
   --font-sans: 'Inter', -apple-system, sans-serif;
 }
 
+[data-theme="light"] {
+  --bg: #ffffff;
+  --surface: #f4f7f6;
+  --surface-hover: #e8eceb;
+  --border: #d1d9d6;
+  --text: #1a1f1e;
+  --text-muted: #5b6260;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -80,6 +89,10 @@ a {
   background-size: cover;
   background-position: bottom center;
   border-bottom: 1px solid var(--border);
+}
+
+[data-theme="light"] .hero {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.1) 100%), url('/src/assets/hero-robot-light.jpg');
 }
 .hero-content {
   max-width: 800px;
@@ -274,6 +287,19 @@ a {
   border: 3px solid var(--accent);
   border-radius: 50%;
   z-index: 1;
+}
+
+[dir="rtl"] .timeline-item {
+  padding-left: 0;
+  padding-right: 3rem;
+}
+[dir="rtl"] .timeline-item::before {
+  left: auto;
+  right: 7px;
+}
+[dir="rtl"] .timeline-dot {
+  left: auto;
+  right: 0;
 }
 .timeline-content {
   background: var(--surface);
