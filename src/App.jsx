@@ -34,38 +34,37 @@ function App() {
           <div className="grid">
             
             <div className="card">
-              <h3>⚙️ AI Engineering</h3>
-              <p style={{ marginBottom: '1.5rem' }}>Build, train, and deploy real-world AI models. Collaborate on technical projects and codebases.</p>
-              <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: 600, fontSize: '0.9rem' }}>Join via WhatsApp &rarr;</a>
-            </div>
-
-            <div className="card">
-              <h3>🔬 AI Research</h3>
-              <p style={{ marginBottom: '1.5rem' }}>Dive deep into academic papers, explore cutting-edge AI theories, and work on publishing findings.</p>
-              <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: 600, fontSize: '0.9rem' }}>Join via WhatsApp &rarr;</a>
-            </div>
-
-            <div className="card">
-              <h3>🎉 Events & Activities</h3>
-              <p style={{ marginBottom: '1.5rem' }}>Organize hackathons, tech talks, and social gatherings to bring the AI community together.</p>
-              <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: 600, fontSize: '0.9rem' }}>Join via WhatsApp &rarr;</a>
-            </div>
-
-            <div className="card">
-              <h3>📚 Learning & Workshops</h3>
-              <p style={{ marginBottom: '1.5rem' }}>Design and teach beginner to advanced AI courses and workshops to upskill our members.</p>
-              <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: 600, fontSize: '0.9rem' }}>Join via WhatsApp &rarr;</a>
-            </div>
-
-            <div className="card">
-              <h3>📱 Media & Marketing</h3>
+              <h3>📱 Social Media Department</h3>
+              <p style={{ fontSize: '0.9rem', color: 'var(--accent)', marginBottom: '0.5rem', fontWeight: 'bold' }}>قسم الإعلام الرقمي</p>
               <p style={{ marginBottom: '1.5rem' }}>Manage our public presence, design content, and spread the word about our amazing club.</p>
               <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: 600, fontSize: '0.9rem' }}>Join via WhatsApp &rarr;</a>
             </div>
 
             <div className="card">
-              <h3>🤝 Partnerships & Sponsorships</h3>
+              <h3>🎉 Events & Activities Department</h3>
+              <p style={{ fontSize: '0.9rem', color: 'var(--accent)', marginBottom: '0.5rem', fontWeight: 'bold' }}>قسم الفعاليات والأنشطة</p>
+              <p style={{ marginBottom: '1.5rem' }}>Organize hackathons, tech talks, and social gatherings to bring the AI community together.</p>
+              <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: 600, fontSize: '0.9rem' }}>Join via WhatsApp &rarr;</a>
+            </div>
+
+            <div className="card">
+              <h3>🤝 Sponsorship & Partnership Department</h3>
+              <p style={{ fontSize: '0.9rem', color: 'var(--accent)', marginBottom: '0.5rem', fontWeight: 'bold' }}>قسم الشراكات والرعاية</p>
               <p style={{ marginBottom: '1.5rem' }}>Connect with tech companies and sponsors to fund our events and provide professional opportunities.</p>
+              <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: 600, fontSize: '0.9rem' }}>Join via WhatsApp &rarr;</a>
+            </div>
+
+            <div className="card">
+              <h3>⚙️ AI Engineering Department</h3>
+              <p style={{ fontSize: '0.9rem', color: 'var(--accent)', marginBottom: '0.5rem', fontWeight: 'bold' }}>قسم هندسة الذكاء الاصطناعي</p>
+              <p style={{ marginBottom: '1.5rem' }}>Build, train, and deploy real-world AI models. Collaborate on technical projects and codebases.</p>
+              <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: 600, fontSize: '0.9rem' }}>Join via WhatsApp &rarr;</a>
+            </div>
+
+            <div className="card">
+              <h3>📚 Learning & Workshops Department</h3>
+              <p style={{ fontSize: '0.9rem', color: 'var(--accent)', marginBottom: '0.5rem', fontWeight: 'bold' }}>قسم التعلم وورش العمل</p>
+              <p style={{ marginBottom: '1.5rem' }}>Design and teach beginner to advanced AI courses and workshops to upskill our members.</p>
               <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: 600, fontSize: '0.9rem' }}>Join via WhatsApp &rarr;</a>
             </div>
 
