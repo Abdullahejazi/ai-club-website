@@ -77,12 +77,12 @@ function App() {
           <p className="section-desc">The students behind the initiative.</p>
           <div className="team-grid">
             <div className="team-member">
-              <img src="https://ui-avatars.com/api/?name=Abdullah&background=00d2ff&color=fff&size=256" alt="Abdullah" className="team-avatar" />
+              <img src="https://ui-avatars.com/api/?name=Abdullah&background=f47c20&color=fff&size=256" alt="Abdullah" className="team-avatar" />
               <h3>Abdullah</h3>
               <p>Co-Founder</p>
             </div>
             <div className="team-member">
-              <img src="https://ui-avatars.com/api/?name=Co+Founder&background=00d2ff&color=fff&size=256" alt="Co-Founder 2" className="team-avatar" />
+              <img src="https://ui-avatars.com/api/?name=Co+Founder&background=f47c20&color=fff&size=256" alt="Co-Founder 2" className="team-avatar" />
               <h3>Co-Founder 2</h3>
               <p>Co-Founder</p>
             </div>
