@@ -19,7 +19,6 @@ function App() {
             <h1>Build the future<br />with Artificial Intelligence</h1>
             <p>Join our university's fastest-growing community of students dedicated to machine learning, deep learning, and AI innovation.</p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem', justifyContent: 'center' }}>
-              <a href="#departments" className="btn">Explore Departments</a>
               <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" className="btn" style={{ backgroundColor: '#25D366', color: '#fff' }}>
                 Join WhatsApp Group
               </a>
