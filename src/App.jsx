@@ -7,8 +7,7 @@ function App() {
       <nav className="nav container">
         <div className="nav-logo">AI<span>Club</span></div>
         <div className="nav-links">
-          <a href="#resources">Resources</a>
-          <a href="#projects">Hall of Fame</a>
+          <a href="#departments">Departments</a>
           <a href="#team">Meet the Team</a>
         </div>
       </nav>
@@ -20,7 +19,7 @@ function App() {
             <h1>Build the future<br />with Artificial Intelligence</h1>
             <p>Join our university's fastest-growing community of students dedicated to machine learning, deep learning, and AI innovation.</p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem', justifyContent: 'center' }}>
-              <a href="#projects" className="btn">View Our Work</a>
+              <a href="#departments" className="btn">Explore Departments</a>
               <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" className="btn" style={{ backgroundColor: '#25D366', color: '#fff' }}>
                 Join WhatsApp Group
               </a>
@@ -28,39 +27,48 @@ function App() {
           </div>
         </section>
 
-        {/* Resources Section */}
-        <section id="resources" className="section container">
-          <h2 className="section-title">Resource Hub</h2>
-          <p className="section-desc">Don't know where to start? We've curated the best free resources to get you up to speed in the world of AI.</p>
+        {/* Departments Section */}
+        <section id="departments" className="section container">
+          <h2 className="section-title">Our Departments</h2>
+          <p className="section-desc">We have specialized groups for every interest. Find your fit and join the conversation in our WhatsApp community!</p>
           <div className="grid">
+            
             <div className="card">
-              <h3>Fast.ai (Practical Deep Learning)</h3>
-              <p>A highly practical course that gets you building state-of-the-art models immediately without needing heavy math.</p>
+              <h3>⚙️ AI Engineering</h3>
+              <p style={{ marginBottom: '1.5rem' }}>Build, train, and deploy real-world AI models. Collaborate on technical projects and codebases.</p>
+              <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: 600, fontSize: '0.9rem' }}>Join via WhatsApp &rarr;</a>
             </div>
-            <div className="card">
-              <h3>Hugging Face Course</h3>
-              <p>Learn how to use modern NLP and Generative AI models using the famous Transformers library.</p>
-            </div>
-            <div className="card">
-              <h3>Kaggle</h3>
-              <p>The home of data science. Find free datasets, GPU computing, and competitions to test your skills.</p>
-            </div>
-          </div>
-        </section>
 
-        {/* Hall of Fame */}
-        <section id="projects" className="section container">
-          <h2 className="section-title">Hall of Fame</h2>
-          <p className="section-desc">A showcase of the incredible projects built by our members during hackathons and workshops.</p>
-          <div className="grid">
             <div className="card">
-              <h3>Campus Parking Predictor</h3>
-              <p>A computer vision model that analyzes live camera feeds to predict which parking lots have available spaces.</p>
+              <h3>🔬 AI Research</h3>
+              <p style={{ marginBottom: '1.5rem' }}>Dive deep into academic papers, explore cutting-edge AI theories, and work on publishing findings.</p>
+              <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: 600, fontSize: '0.9rem' }}>Join via WhatsApp &rarr;</a>
             </div>
+
             <div className="card">
-              <h3>StudyBot Discord Agent</h3>
-              <p>An LLM-powered Discord bot that quizzes students on their lecture notes and summarizes long PDFs.</p>
+              <h3>🎉 Events & Activities</h3>
+              <p style={{ marginBottom: '1.5rem' }}>Organize hackathons, tech talks, and social gatherings to bring the AI community together.</p>
+              <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: 600, fontSize: '0.9rem' }}>Join via WhatsApp &rarr;</a>
             </div>
+
+            <div className="card">
+              <h3>📚 Learning & Workshops</h3>
+              <p style={{ marginBottom: '1.5rem' }}>Design and teach beginner to advanced AI courses and workshops to upskill our members.</p>
+              <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: 600, fontSize: '0.9rem' }}>Join via WhatsApp &rarr;</a>
+            </div>
+
+            <div className="card">
+              <h3>📱 Media & Marketing</h3>
+              <p style={{ marginBottom: '1.5rem' }}>Manage our public presence, design content, and spread the word about our amazing club.</p>
+              <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: 600, fontSize: '0.9rem' }}>Join via WhatsApp &rarr;</a>
+            </div>
+
+            <div className="card">
+              <h3>🤝 Partnerships & Sponsorships</h3>
+              <p style={{ marginBottom: '1.5rem' }}>Connect with tech companies and sponsors to fund our events and provide professional opportunities.</p>
+              <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', fontWeight: 600, fontSize: '0.9rem' }}>Join via WhatsApp &rarr;</a>
+            </div>
+
           </div>
         </section>
 
