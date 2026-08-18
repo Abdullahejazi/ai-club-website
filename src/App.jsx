@@ -8,14 +8,15 @@ function App() {
         <div className="nav-logo">AI<span>Club</span></div>
         <div className="nav-links">
           <a href="#departments">Departments</a>
+          <a href="#gallery">Gallery</a>
           <a href="#team">Meet the Team</a>
         </div>
       </nav>
 
       <main>
         {/* Hero Section */}
-        <section className="hero container">
-          <div className="hero-content">
+        <section className="hero">
+          <div className="hero-content container">
             <h1>Build the future<br />with Artificial Intelligence</h1>
             <p>Join our university's fastest-growing community of students dedicated to machine learning, deep learning, and AI innovation.</p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem', justifyContent: 'center' }}>
@@ -65,18 +66,29 @@ function App() {
           </div>
         </section>
 
+        {/* Gallery Section */}
+        <section id="gallery" className="section container">
+          <h2 className="section-title">Event Gallery</h2>
+          <p className="section-desc">A glimpse into our hackathons, workshops, and community meetups.</p>
+          <div className="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Students collaborating" className="gallery-img" />
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Hackathon" className="gallery-img" />
+            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=600&q=80" alt="Tech setup" className="gallery-img" />
+          </div>
+        </section>
+
         {/* Team Section */}
         <section id="team" className="section container">
           <h2 className="section-title">Meet the Founders</h2>
           <p className="section-desc">The students behind the initiative.</p>
           <div className="team-grid">
             <div className="team-member">
-              <div className="team-avatar">👨‍💻</div>
+              <img src="https://ui-avatars.com/api/?name=Abdullah&background=00d2ff&color=fff&size=256" alt="Abdullah" className="team-avatar" />
               <h3>Abdullah</h3>
               <p>Co-Founder</p>
             </div>
             <div className="team-member">
-              <div className="team-avatar">👩‍💻</div>
+              <img src="https://ui-avatars.com/api/?name=Co+Founder&background=00d2ff&color=fff&size=256" alt="Co-Founder 2" className="team-avatar" />
               <h3>Co-Founder 2</h3>
               <p>Co-Founder</p>
             </div>
