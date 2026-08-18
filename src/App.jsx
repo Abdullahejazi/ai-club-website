@@ -91,9 +91,20 @@ function App() {
         {/* Call to Action */}
         <section className="section container" style={{ textAlign: 'center', borderBottom: 'none', paddingBottom: '2rem' }}>
           <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Ready to shape the future?</h2>
-          <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" className="btn" style={{ backgroundColor: '#25D366', color: '#fff', fontSize: '1.1rem', padding: '1rem 2rem' }}>
-            Join our WhatsApp Group
-          </a>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
+            <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" className="btn" style={{ backgroundColor: '#25D366', color: '#fff', fontSize: '1.1rem', padding: '1rem 2rem' }}>
+              Join our WhatsApp Group
+            </a>
+            
+            <div style={{ display: 'flex', gap: '2rem' }}>
+              <a href="https://www.instagram.com/aiclub_yu/?hl=en" target="_blank" rel="noopener noreferrer" className="social-link">
+                Instagram
+              </a>
+              <a href="https://www.linkedin.com/posts/ai-club-ayu_alyamamahabruniversity-aiabrclub-artificialintelligence-activity-7462952891910180864-Ew-k?utm_source=share&utm_medium=member_android&rcm=ACoAADtq1ncBvH7_kubs-94hIl3Zue1E08rBwPg" target="_blank" rel="noopener noreferrer" className="social-link">
+                LinkedIn
+              </a>
+            </div>
+          </div>
         </section>
       </main>
 

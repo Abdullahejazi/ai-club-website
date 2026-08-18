@@ -203,6 +203,17 @@ a {
   font-weight: 500;
 }
 
+/* Social Links */
+.social-link {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.social-link:hover {
+  color: var(--accent);
+}
+
 @media (max-width: 768px) {
   .hero-content h1 { font-size: 2.5rem; }
   .nav-links { display: none; }
