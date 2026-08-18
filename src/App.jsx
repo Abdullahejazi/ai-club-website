@@ -45,8 +45,9 @@ function App() {
         <div className="nav-logo">AI<span>Club</span></div>
         <div className="nav-links">
           <a href="#departments">Departments</a>
+          <a href="#events">Events</a>
           <a href="#gallery">Gallery</a>
-          <a href="#team">Meet the Team</a>
+          <a href="#team">Team</a>
         </div>
       </AnimatedDiv>
 
@@ -64,6 +65,28 @@ function App() {
             <p>Join our university's fastest-growing community of students dedicated to machine learning, deep learning, and AI innovation.</p>
             <p style={{ color: 'var(--accent)', fontWeight: 600, marginTop: '1rem' }}>Empowering the next generation of tech leaders.</p>
           </motion.div>
+        </section>
+
+        {/* Stats Banner */}
+        <section className="stats-banner">
+          <AnimatedDiv className="container stats-grid" scrollDir={scrollDir}>
+            <div className="stat-item">
+              <h3>50+</h3>
+              <p>Active Members</p>
+            </div>
+            <div className="stat-item">
+              <h3>10+</h3>
+              <p>AI Projects</p>
+            </div>
+            <div className="stat-item">
+              <h3>15+</h3>
+              <p>Workshops</p>
+            </div>
+            <div className="stat-item">
+              <h3>3</h3>
+              <p>Hackathons Won</p>
+            </div>
+          </AnimatedDiv>
         </section>
 
         {/* Departments Section */}
@@ -102,6 +125,43 @@ function App() {
               <h3>📚 Learning & Workshops Department</h3>
               <p style={{ fontSize: '0.9rem', color: 'var(--accent)', marginBottom: '0.5rem', fontWeight: 'bold' }}>قسم التعلم وورش العمل</p>
               <p>Design and teach beginner to advanced AI courses and workshops to upskill our members.</p>
+            </AnimatedDiv>
+          </div>
+        </section>
+
+        {/* Timeline Section */}
+        <section id="events" className="section container" style={{ backgroundColor: 'var(--surface-hover)', borderRadius: '24px', padding: '4rem 2rem' }}>
+          <AnimatedDiv scrollDir={scrollDir}>
+            <h2 className="section-title">Our Journey</h2>
+            <p className="section-desc">Key milestones and upcoming events.</p>
+          </AnimatedDiv>
+          
+          <div className="timeline">
+            <AnimatedDiv className="timeline-item" scrollDir={scrollDir} delay={100}>
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <span className="timeline-date">Upcoming • Oct 15</span>
+                <h3>Introduction to Machine Learning Workshop</h3>
+                <p>A hands-on session for beginners to build their first prediction model.</p>
+              </div>
+            </AnimatedDiv>
+            
+            <AnimatedDiv className="timeline-item" scrollDir={scrollDir} delay={200}>
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <span className="timeline-date">Past • Sep 20</span>
+                <h3>Fall 2026 Hackathon</h3>
+                <p>Our engineering department took 1st place in the university-wide AI hackathon.</p>
+              </div>
+            </AnimatedDiv>
+
+            <AnimatedDiv className="timeline-item" scrollDir={scrollDir} delay={300}>
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <span className="timeline-date">Past • Sep 05</span>
+                <h3>First General Meeting</h3>
+                <p>Kicked off the semester with a massive turnout of students passionate about AI.</p>
+              </div>
             </AnimatedDiv>
           </div>
         </section>
