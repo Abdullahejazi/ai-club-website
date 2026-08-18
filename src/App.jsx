@@ -19,11 +19,7 @@ function App() {
           <div className="hero-content container">
             <h1>Build the future<br />with Artificial Intelligence</h1>
             <p>Join our university's fastest-growing community of students dedicated to machine learning, deep learning, and AI innovation.</p>
-            <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem', justifyContent: 'center' }}>
-              <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" className="btn" style={{ backgroundColor: '#25D366', color: '#fff' }}>
-                Join WhatsApp Group
-              </a>
-            </div>
+            <p style={{ color: 'var(--accent)', fontWeight: 600, marginTop: '1rem' }}>Empowering the next generation of tech leaders.</p>
           </div>
         </section>
 
@@ -91,6 +87,13 @@ function App() {
               <p>Co-Founder</p>
             </div>
           </div>
+        </section>
+        {/* Call to Action */}
+        <section className="section container" style={{ textAlign: 'center', borderBottom: 'none', paddingBottom: '2rem' }}>
+          <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Ready to shape the future?</h2>
+          <a href="https://chat.whatsapp.com/BZKdbrTS7mT7gB6RNeh9GM" target="_blank" rel="noopener noreferrer" className="btn" style={{ backgroundColor: '#25D366', color: '#fff', fontSize: '1.1rem', padding: '1rem 2rem' }}>
+            Join our WhatsApp Group
+          </a>
         </section>
       </main>
 
